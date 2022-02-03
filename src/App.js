@@ -105,7 +105,7 @@ function App() {
         setGoblinFormHP={setGoblinFormHP}
       />
       <GoblinList 
-        goblins={[...allGoblins]} // this takes in an array of goblins. If the filteredGoblins has a length, use that array. Otherwise, use the allGoblins array 
+        goblins={filteredGoblins ? filteredGoblins : allGoblins } // this takes in an array of goblins. If the filteredGoblins has a length, use that array. Otherwise, use the allGoblins array 
         handleDeleteGoblin={handleDeleteGoblin} // note that the goblin list has access to the ability to delete
       />
     </div>
